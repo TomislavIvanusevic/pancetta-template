@@ -1,0 +1,180 @@
+@charset "utf-8";
+//Variables
+$primary: #e5e5e5;
+$family-sans-serif: "Arial, Helvetica", sans-serif;
+$button-active-color: #000;
+$link-hover: $primary;
+$link: #535353;
+$input-background-color: #e5e5e5;
+$input-focus-border-color: #c5c5c5;
+$control-radius: 2px;
+//Fonts
+@font-face {
+  font-family: "Ars Maquette Bold";
+  src: url("../css/fonts/ars-maquette-bold-alt.woff") format("woff");
+}
+@font-face {
+  font-family: "Ars Maquette Black";
+  src: url("../css/fonts/ars-maquette-black-alt.woff") format("woff");
+}
+@font-face {
+  font-family: "Coolvetica Regular";
+  src: url("../css/fonts/coolvetica-rg.ttf") format("truetype");
+}
+//import Bulma
+@import "bulma.sass";
+
+.title,
+.button {
+  font-family: Coolvetica Regular, sans-serif;
+  font-weight: normal;
+}
+
+.button.is-dark {
+  background-color: #000;
+}
+
+//HEADER & NAV
+
+.navigation {
+  height: 160px;
+  padding-top: 20px;
+  @include mobile {
+    height: auto;
+  }
+}
+.navbar-burger span {
+  height: 2px;
+  width: 20px;
+}
+.navbar-burger:hover {
+  color: #000;
+}
+.navbar-menu .navbar-item {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+.navbar-item img {
+  max-height: 3rem !important;
+}
+header a.link {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+//HERO
+
+.hero {
+  background-image: url("../img/herobg.png");
+  background-size: cover;
+}
+.heroimg {
+  margin-bottom: -70px;
+  @include mobile {
+    margin: 0 !important;
+  }
+}
+.hero a.button {
+  height: 85px;
+  font-size: 1.5rem;
+}
+.hero .button span.icon {
+  height: 54px;
+  width: 54px;
+}
+.hero a.button:hover {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.btnicon {
+  background-image: url("../img/cta_icon.png");
+  background-repeat: no-repeat;
+  height: 54px;
+  width: 54px;
+}
+.hero a.button:hover .btnicon {
+  background-image: url("../img/cta_icon_bl.png");
+}
+.hero a.button .icon {
+  margin-right: 0.8rem !important;
+}
+
+//SECTIONS
+
+#section2 {
+  background-image: url("../img/section2bg.png");
+  background-repeat: no-repeat;
+  background-position: 65% 0%;
+  @include mobile {
+    background: #fff;
+  }
+}
+#section3 {
+  background-image: url("../img/section3bg.png");
+  background-size: cover;
+  @include mobile {
+    background-image: url("../img/section3bgm.png");
+  }
+  img {
+    @include desktop {
+      float: right !important;
+    }
+  }
+}
+#section4 {
+  background-image: url("../img/section4bg.png");
+  background-repeat: no-repeat;
+  background-position: 70% 100%;
+  @include mobile {
+    background-image: none;
+  }
+}
+
+//CONTACT + FORM
+
+.control .button {
+  background-image: url("../img/Shadow.png");
+  background-position: center;
+  background-color: #272727;
+  font-family: Ars Maquette Black, sans-serif;
+  @include mobile {
+    width: 100%;
+    background-image: url("../img/shadowbtn_mobile.png");
+    background-position: center;
+  }
+}
+
+.control .button:hover {
+  background-image: url("../img/btnbg_hover.png");
+  background-position: center;
+  background-color: #ff0000;
+  @include mobile {
+    background-image: none;
+  }
+}
+
+.contact {
+  img {
+    vertical-align: middle;
+  }
+  span {
+    position: absolute;
+    font-weight: bold;
+    margin-left: 1.25rem;
+
+    strong {
+      color: #747474;
+    }
+  }
+  a {
+    color: #747474;
+    border-bottom: 1px solid #747474;
+  }
+  a:hover {
+    color: #ff0000;
+    border-color: #ff0000;
+  }
+}
